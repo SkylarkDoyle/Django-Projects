@@ -4,7 +4,7 @@ import { Wrapper } from './styles'
 
 import { LayoutProps } from '../../typings'
 
-const index = ({ children, sidebar, ...props }: LayoutProps) => {
+const index = ({ children, sidebar }: LayoutProps) => {
   return (
     <Wrapper className="layout-dashboard d-flex justify-content-centent align-items-start">
       <DashboardSidebar>{sidebar}</DashboardSidebar>

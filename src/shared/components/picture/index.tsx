@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import LogoIcon from '../../themes/assets/images/logo.svg'
+import LogoIcon from '../../themes/assets/images/gromoni.svg'
 import { StyledProps } from '../../typings'
 
 const LogoIMG = styled.img.attrs((props: StyledProps) => ({

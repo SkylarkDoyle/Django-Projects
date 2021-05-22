@@ -1,12 +1,12 @@
 import React from 'react'
-import { DashboardSidebar } from '../../components'
+import { Sidebar } from '../../components'
 import { Wrapper } from './styles'
 import { LayoutProps } from '../../typings'
 
-const index = ({ children, sidebar, ...props }: LayoutProps) => {
+const index = ({ children, sidebar }: LayoutProps) => {
   return (
-    <Wrapper className="layout-dashboard d-flex justify-content-centent align-items-start">
-      <DashboardSidebar>{sidebar}</DashboardSidebar>
+    <Wrapper className="layout-dashboard d-flex justify-content-start align-items-start">
+      <Sidebar>{sidebar}</Sidebar>
       <div>{children}</div>
     </Wrapper>
   )

@@ -27,7 +27,7 @@ export default class Index extends React.Component<Props, State> {
         </Helmet>
         <div id="_home">
           <Header className="text-center" margin="30px auto 5px">
-            Welcome to digiftng
+            Welcome to Gromoni
           </Header>
           <SubHeader className="text-center" margin="0 auto">
             This WebApp enables you to plan your day <br />

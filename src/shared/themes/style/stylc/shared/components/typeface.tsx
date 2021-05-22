@@ -16,9 +16,9 @@ export const Header = styled.h1<Partial<Typeface>>`
   margin: ${(props) => props.margin};
   font-style: normal;
   font-weight: bold;
-  font-size: ${({ fontSize, theme }) => (fontSize ? theme?.fontSize(fontSize) || fontSize : '40px')};
+  font-size: ${({ fontSize, theme }) => (fontSize ? theme?.fontSize(fontSize) || fontSize : '32px')};
   line-height: 50px;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.01em;
 `
 Header.defaultProps = { margin: '0 0 16px' }
 export const SubHeader = styled.h3<Partial<Typeface>>`

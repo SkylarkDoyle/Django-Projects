@@ -1,0 +1,61 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the action will run. Triggers the workflow on  pull request
+# events for all branch
+on: 
+  push: 
+    branches:
+      - develop
+      - master
+  pull_request:
+    branches:
+      - develop
+      - master
+
+env:
+  CI: true
+  REACT_APP_Api_Key: ${{ secrets.REACT_APP_Api_Key }}
+  REACT_APP_AuthDomain: ${{ secrets.REACT_APP_AuthDomain }}
+  REACT_APP_DatabaseURL: ${{ secrets.REACT_APP_DatabaseURL }}
+  REACT_APP_ProjectId: ${{ secrets.REACT_APP_ProjectId }}   
+  REACT_APP_StorageBucket: ${{ secrets.REACT_APP_StorageBucket }} 
+  REACT_APP_MessagingSenderId: ${{ secrets.REACT_APP_MessagingSenderId }}
+  REACT_APP_MeasurementId: ${{ secrets.REACT_APP_MeasurementId }}
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # Run tests.
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x]
+    steps:
+      - uses: actions/checkout@v2          
+      - uses: actions/setup-node@v1 
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install packages
+        run: yarn install  
+      - name: run linting test
+        run: yarn lint            
+      - name: run tests for codebase
+        run: yarn test   
+
+ 
+          
+
+  # deploy:
+  #   # Ensure test job passes before deploying to heroku platfoem
+  #   needs: test
+
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - uses: akhileshns/heroku-deploy@v3.0.0
+  #       with:
+  #         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+  #         heroku_app_name: "reachzone-web-startkit"
+  #         heroku_email: "adewumi.sunkanmi@reachzone.org"
+  #         usedocker: false

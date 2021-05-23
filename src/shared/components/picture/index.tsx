@@ -21,7 +21,7 @@ export const Logo = ({
   className?: string
   id?: string
   height?: string
-  onClick?: () => void
+  onClick?: (() => void) | undefined
   margin?: string
   src?: StyledProps['src']
   width?: string

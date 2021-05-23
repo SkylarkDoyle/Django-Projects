@@ -5,7 +5,7 @@ import BackgroundTwo from '../../themes/assets/images/sidebar_background_two.png
 
 export const Sidebar = styled.section<StyledProps>`
   width: ${(props) => props.width || '100%'};
-  height: ${(props) => props.height || '20%'};
+  height: ${(props) => props.height || '15%'};
   background-color: ${({ theme }) => theme.color('white') || 'brand_color'};
   color: ${({ theme }) => theme.color('brand_color') || 'white'};
   font-size: 16px;
@@ -18,9 +18,11 @@ export const Sidebar = styled.section<StyledProps>`
     display: none;
   }
   .sidebar_logo {
+    /* padding-left: 24px; */
     .logo_text {
       font-size: 16px;
       line-height: 24px;
+      color: ${({ theme }) => theme.color('brand_color') || 'white'};
     }
   }
 
@@ -44,6 +46,7 @@ export const Sidebar = styled.section<StyledProps>`
       .logo_text{
         font-size: 40px;
         line-height: 60px;
+        color: ${theme.color('white') || 'status'};
       }
     }
 `}

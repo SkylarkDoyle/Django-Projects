@@ -15,6 +15,7 @@ const colors: { [index: string]: string } = {
   gray: '#90A0B7',
   icon_gray: '#C2CFE0',
   white: '#FFFFFF',
+  transparent: 'transparent',
 }
 
 const color = (colorName: string): string => (colorName ? colors[colorName] : '')

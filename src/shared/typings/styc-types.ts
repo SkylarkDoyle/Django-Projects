@@ -26,4 +26,5 @@ export interface StyledProps {
   className?: string
   value?: string
   name?: string
+  boxShadow?: string
 }

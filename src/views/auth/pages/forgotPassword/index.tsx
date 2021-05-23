@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { Helmet } from 'react-helmet'
 import { AuthLayout } from '../../../../shared/layout'
-import { Header, SubHeader, Anchor, SubTitle } from '../../../../shared/themes/style/stylc/shared/components'
-import { LoginForm, Socials } from '../../components'
+import { Header, SubHeader } from '../../../../shared/themes/style/stylc/shared/components'
+import { ForgotPasswordForm } from '../../components'
 import { Wrapper } from './styles'
 
 interface Props {
@@ -30,16 +30,9 @@ export default class Index extends React.Component<Props, State> {
         </Helmet>
         <AuthLayout>
           <Wrapper className="container px-4 d-flex justify-content-start align-items-start flex-column">
-            <Header>Sign in</Header>
-            <SubHeader className="pb-4">
-              Don&apos;t have an account?
-              <Anchor className="ml-2" href="/auth/register">
-                Sign up
-              </Anchor>
-            </SubHeader>
-            <LoginForm />
-            <SubTitle margin="32px 0 0">Or sign in with the following options</SubTitle>
-            <Socials />
+            <Header>Forgot password</Header>
+            <SubHeader className="pb-4">Please enter your registered email address</SubHeader>
+            <ForgotPasswordForm />
           </Wrapper>
         </AuthLayout>
       </>

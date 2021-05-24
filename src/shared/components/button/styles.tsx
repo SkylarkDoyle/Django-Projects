@@ -26,6 +26,7 @@ export const Container = styled(Button)<ButtonProps>`
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: ${({ boxShadow }) => boxShadow};
   :hover {
     color: ${({ theme }) => theme?.color('white')};
     background-color: ${({ theme }) => theme?.color('sonic_silver')};
@@ -78,9 +79,10 @@ export const Container = styled(Button)<ButtonProps>`
   }
 `
 Container.defaultProps = {
-  width: '240px',
+  width: '160px',
+  height: '42px',
   margin: '16px 0px',
-  height: '50px',
   borderRadius: '4px',
   fontSize: '12px',
+  boxShadow: '0px 4px 10px rgba(34, 73, 174, 0.24)',
 }

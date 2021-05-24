@@ -29,7 +29,7 @@ export const CheckBoxLabel = styled.label<FormTypes>`
     height: 15px;
     width: 15px;
     background-color: #fff;
-    border: 0.5px solid ${(props: FormTypes) => props?.theme?.color('sonic_silver')};
+    border: 0.5px solid ${(props: FormTypes) => props?.theme?.color('gray')};
     border-radius: 3px;
   }
   .checkmark:after {
@@ -42,10 +42,10 @@ export const CheckBoxLabel = styled.label<FormTypes>`
     display: block;
   }
   :hover input ~ .checkmark {
-    background-color: ${(props: FormTypes) => props?.theme?.color('english_red')};
+    background-color: ${(props: FormTypes) => props?.theme?.color('error')};
   }
   input:checked ~ .checkmark {
-    background-color: ${(props: FormTypes) => props?.theme?.color('english_red')};
+    background-color: ${(props: FormTypes) => props?.theme?.color('error')};
     border: none;
   }
   .checkmark:after {
@@ -90,20 +90,20 @@ export const CheckBoxLabel = styled.label<FormTypes>`
     width: 12px;
     background-color: ${(props: FormTypes) => props?.theme?.color('white')};
     border-radius: 50%;
-    border: 0.5px solid ${(props: FormTypes) => props?.theme?.color('sonic_silver')};
+    border: 0.5px solid ${(props: FormTypes) => props?.theme?.color('gray')};
   }
 
   /* On mouse-over, add a grey background color */
   &[type='radio']:hover input ~ .checkmark {
-    background-color: ${(props: FormTypes) => props?.theme?.color('english_red')};
-    border: 1px solid ${(props: FormTypes) => props?.theme?.color('english_red')};
+    background-color: ${(props: FormTypes) => props?.theme?.color('error')};
+    border: 1px solid ${(props: FormTypes) => props?.theme?.color('error')};
   }
 
   /* When the radio button is checked, add a white background */
   &[type='radio'] input:checked ~ .checkmark {
     background-color: ${(props: FormTypes) => props?.theme?.color('white')};
     border-radius: 50%;
-    border: 1px solid ${(props: FormTypes) => props?.theme?.color('english_red')};
+    border: 1px solid ${(props: FormTypes) => props?.theme?.color('error')};
   }
 
   /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -125,9 +125,9 @@ export const CheckBoxLabel = styled.label<FormTypes>`
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    border: solid ${(props: FormTypes) => props?.theme?.color('english_red')};
+    border: solid ${(props: FormTypes) => props?.theme?.color('error')};
     border-width: 3px;
-    background: ${(props: FormTypes) => props?.theme?.color('english_red')};
+    background: ${(props: FormTypes) => props?.theme?.color('error')};
   }
 `
 export const CheckBox = styled.input<FormTypes>`
@@ -173,17 +173,17 @@ export const MainInput = styled.input<FormTypes>`
     ${({ theme, errorMessage, isValid, isEmpty }: FormTypes) => {
     if (errorMessage) {
       if (isEmpty) {
-        return theme.color('english_red')
+        return theme.color('error')
       }
       if (!isValid) {
-        return theme.color('warning_yellow')
+        return theme.color('information')
       }
     }
     return theme.color('gray_5')
   }}; */
   ::placeholder {
     font-size: 12px;
-    color: ${(props: FormTypes) => props?.theme?.color('sonic_silver')};
+    color: ${(props: FormTypes) => props?.theme?.color('gray')};
   }
 
   :focus {
@@ -211,7 +211,7 @@ export const Select = styled.select<FormTypes>`
   margin: ${(props: FormTypes) => props.margin};
   border: 1px solid
     ${({ theme, errorMessage, isEmpty }: FormTypes) => {
-      return isEmpty && errorMessage ? theme.color('english_red') : theme.color('gray_5')
+      return isEmpty && errorMessage ? theme.color('error') : theme.color('gray_5')
     }};
   border-radius: 8px;
   background: transparent;
@@ -229,7 +229,7 @@ export const Select = styled.select<FormTypes>`
   color: ${(props: FormTypes) => props?.theme?.color('table_black')};
   cursor: pointer;
   required:invalid {
-    color: ${(props: FormTypes) => props?.theme?.color('sonic_silver')};
+    color: ${(props: FormTypes) => props?.theme?.color('gray')};
   }
   option[value=''][disabled] {
     display: none;
@@ -261,10 +261,10 @@ export const MainInputContainer = styled.div<FormTypes>`
     ${({ theme, errorMessage, isValid, isEmpty }: FormTypes) => {
       if (errorMessage) {
         if (isEmpty) {
-          return theme.color('english_red')
+          return theme.color('error')
         }
         if (!isValid) {
-          return theme.color('warning_yellow')
+          return theme.color('information')
         }
       }
       return theme.color('text_line')

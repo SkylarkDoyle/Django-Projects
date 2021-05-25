@@ -3,7 +3,6 @@ import { useHistory } from 'react-router-dom'
 import { Form, FormikProps, Formik } from 'formik'
 import * as Yup from 'yup'
 import { Button, Main } from '../../../../shared/components'
-import { Anchor } from '../../../../shared/themes/style/stylc/shared/components'
 
 interface Values {
     password: string

@@ -25,6 +25,7 @@ const AddBusinessForm = () => {
         <>
             <Formik
                 initialValues={{
+
                     email: '',
                     password: '',
                 }}

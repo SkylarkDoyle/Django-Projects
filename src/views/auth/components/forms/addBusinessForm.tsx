@@ -41,11 +41,11 @@ const AddBusinessForm = () => {
             >
                 {(props: FormikProps<Values>) => (
                     <Form>
-                        <Main name="BusinessCategory" type="text" label="BusinessCategory" required />
-                        <Main name="BusinessName" type="text" label="BusinessName" required />
-                        <Main name=" BusinessEmail" type="email" label="BusinessEmail" required />
-                        <Main name="BusinessPhoneNumber" type="text" label="BusinessPhoneNumber" required />
-                        <Main name="BusinessLocation" type="text" label="BusinessLocation" required />
+                        <Main name="BusinessCategory" type="text" label="Business category" required />
+                        <Main name="BusinessName" type="text" label="Business name" required />
+                        <Main name=" BusinessEmail" type="email" label="Business email" required />
+                        <Main name="BusinessPhoneNumber" type="number" label="Business phone number" required />
+                        <Main name="BusinessLocation" type="text" label="Business location" required />
 
                         <Button disabled={!props.isValid && !props.isInitialValid} type="submit">
                             Create business

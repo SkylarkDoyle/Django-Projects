@@ -6,7 +6,7 @@ import PageNotFound from '../../page-not-found'
  * pages
  */
 
-import { Login, Register, ForgotPassword, ResetPassword } from '../pages'
+import { Login, Register, ForgotPassword, ResetPassword, AddBusiness } from '../pages'
 
 const AuthRoute = () => (
   <Switch>
@@ -15,6 +15,8 @@ const AuthRoute = () => (
     <Route exact path="/auth/forgotpassword" component={ForgotPassword} />
     <Route exact path="/auth/register" component={Register} />
     <Route exact path="/auth/login" component={Login} />
+    <Route exact path="/auth/addBusiness" component={AddBusiness} />
+
     <Redirect to="/auth/login" from="/auth" />
     <Route component={PageNotFound} />{' '}
   </Switch>

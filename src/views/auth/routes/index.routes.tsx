@@ -15,8 +15,7 @@ const AuthRoute = () => (
     <Route exact path="/auth/forgotpassword" component={ForgotPassword} />
     <Route exact path="/auth/register" component={Register} />
     <Route exact path="/auth/login" component={Login} />
-    <Route exact path="/auth/addBusiness" component={AddBusiness} />
-
+    <Route exact path="/auth/addbusiness" component={AddBusiness} />
     <Redirect to="/auth/login" from="/auth" />
     <Route component={PageNotFound} />{' '}
   </Switch>

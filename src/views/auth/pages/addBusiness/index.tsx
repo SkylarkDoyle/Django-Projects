@@ -34,9 +34,7 @@ export default class Index extends React.Component<Props, State> {
           <Wrapper className="container px-4 d-flex justify-content-start align-items-start flex-column">
             <Header>Add Business</Header>
             <SubHeader className="pb-4">Fill correctly the form below to create a business</SubHeader>
-
             <UploadBusinessLogo />
-
             <AddBusinessForm />
             <div className="p-4" />
           </Wrapper>

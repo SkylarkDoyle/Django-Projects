@@ -40,7 +40,7 @@ const SignupForm = () => {
             <Main name="lastName" type="text" label="Last Name" required />
             <Main name="email" type="email" label="Email Address" required />
             <Main name="password" type="password" label="Password" required />
-            <Button disabled={!props.isValid && !props.isInitialValid} type="submit">
+            <Button className="default" disabled={!props.isValid && !props.isInitialValid} type="submit">
               Sign up
             </Button>
           </Form>

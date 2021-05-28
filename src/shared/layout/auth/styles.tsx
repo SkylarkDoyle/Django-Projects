@@ -5,6 +5,9 @@ export const Wrapper = styled.section<StyledProps>`
   width: ${(props: StyledProps) => props.width};
   height: ${(props: StyledProps) => props.height};
   flex-direction: column;
+  .children {
+    flex-grow: 1;
+  }
 
   // media queries
   ${({ theme }) => `

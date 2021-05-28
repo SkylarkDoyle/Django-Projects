@@ -31,7 +31,6 @@ export default class Index extends React.Component<Props, State> {
         <AuthLayout>
           <Wrapper className="container px-4 d-flex justify-content-start align-items-start flex-column">
             <Header>New password</Header>
-
             <ResetPasswordForm />
           </Wrapper>
         </AuthLayout>

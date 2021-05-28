@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.section`
   form {
-    width: 100%;
+    width: 50%;
     .forget-password {
       font-weight: 600;
       font-size: 11px;
@@ -18,7 +18,9 @@ export const Wrapper = styled.section`
     flex-direction: row;
     padding-top: 100px;
     padding-left: 108px !important;
-    width: 450px;
+    width: 100%;
+    max-height: 100vh;
+    overflow-y: auto;
   }
 `}
 `

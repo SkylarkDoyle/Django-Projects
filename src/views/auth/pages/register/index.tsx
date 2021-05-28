@@ -40,6 +40,7 @@ export default class Index extends React.Component<Props, State> {
             <RegisterForm />
             <SubTitle margin="32px 0 0">Or sign in with the following options</SubTitle>
             <Socials />
+            <div className="p-4" />
           </Wrapper>
         </AuthLayout>
       </>

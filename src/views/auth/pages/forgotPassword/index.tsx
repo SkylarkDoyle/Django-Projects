@@ -34,6 +34,7 @@ export default class Index extends React.Component<Props, State> {
             <SubHeader className="pb-4">Please enter your registered email address</SubHeader>
             <ForgotPasswordForm />
           </Wrapper>
+          <div className="p-4" />
         </AuthLayout>
       </>
     )

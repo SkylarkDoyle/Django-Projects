@@ -1,29 +1,39 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
-// import JobRoute from '../screens/Job_Entry';
-import { HomeRoute as Home } from '../views/home'
+import { RootStackParamListType } from '../shared/typings'
+
+
+/* pages */
 import { AuthRoute as Auth } from '../views/auth'
+import { HomeRoute as Home } from '../views/home'
 import { UIPlaygroundRoute as UIPlayground } from '../views/ui-playground'
 
-export type RootStackParamListType = {
-  [key: string]: {
-    path: string
-    component: React.FC
-    exact: boolean
-  }
-}
 
-export const BuildRoutes: RootStackParamListType = {
+
+
+/* this handles routes that do not require a layout */
+export const PageRoutes: RootStackParamListType ={
   Home: {
     path: '/',
     component: Home,
     exact: true,
   },
+}
+
+
+/* this handles routes that do not require a layout */
+export const LayoutRoutes: RootStackParamListType ={
   Auth: {
     path: '/auth',
     component: Auth,
     exact: false,
   },
+}
+
+/* this handles all routes */
+export const BuildRoutes: RootStackParamListType = {
+ ...PageRoutes,
+ ...LayoutRoutes,
   UI: {
     path: '/ui-playground',
     component: UIPlayground,
@@ -37,7 +47,6 @@ function Routes() {
       {(Object.keys(BuildRoutes) as (keyof typeof BuildRoutes)[]).map((name) => (
         <Route key={name} {...BuildRoutes[name]} />
       ))}
-      {/* <Route path="/job" component={JobRoute} /> */}
     </Switch>
   )
 }

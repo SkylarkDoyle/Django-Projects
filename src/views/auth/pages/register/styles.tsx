@@ -7,7 +7,6 @@ export const Wrapper = styled.section`
       font-weight: 600;
       font-size: 11px;
       line-height: 16px;
-      /* identical to box height */
       text-align: center;
       letter-spacing: 0.01em;
     }

@@ -10,7 +10,7 @@ import { Home } from '../pages'
 
 const DashboardRoute = () => (
   <Switch>
-    <Route exact path="/dashboard/home/:location" component={Home} />
+    <Route exact path="/dashboard/:page" component={Home} />
     <Route component={PageNotFound} />
     {' '}
   </Switch>

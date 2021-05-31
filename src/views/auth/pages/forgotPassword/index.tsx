@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { Helmet } from 'react-helmet'
-import { AuthLayout } from '../../../../shared/layout'
 import { Header, SubHeader } from '../../../../shared/themes/style/stylc/shared/components'
 import { ForgotPasswordForm } from '../../components'
 import { Wrapper } from './styles'
@@ -26,16 +25,14 @@ export default class Index extends React.Component<Props, State> {
         {/* this component handles setting the title and dynamically injecting head specific tags */}
         <Helmet>
           <meta charSet="utf-8" />
-          <title>Login Page - Gromoni</title>
+          <title>Forgot Password Page - Gromoni</title>
         </Helmet>
-        <AuthLayout>
           <Wrapper className="container px-4 d-flex justify-content-start align-items-start flex-column">
             <Header>Forgot password</Header>
             <SubHeader className="pb-4">Please enter your registered email address</SubHeader>
             <ForgotPasswordForm />
           </Wrapper>
           <div className="p-4" />
-        </AuthLayout>
       </>
     )
   }

@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { Helmet } from 'react-helmet'
-import { AuthLayout } from '../../../../shared/layout'
 import { Header, SubHeader, Anchor, SubTitle } from '../../../../shared/themes/style/stylc/shared/components'
 import { LoginForm, Socials } from '../../components'
 import { Wrapper } from './styles'
@@ -28,7 +27,6 @@ export default class Index extends React.Component<Props, State> {
           <meta charSet="utf-8" />
           <title>Login Page - Gromoni</title>
         </Helmet>
-        <AuthLayout>
           <Wrapper className="container px-4 d-flex justify-content-start align-items-start flex-column">
             <Header>Sign in</Header>
             <SubHeader className="pb-4">
@@ -42,7 +40,6 @@ export default class Index extends React.Component<Props, State> {
             <Socials />
             <div className="p-4" />
           </Wrapper>
-        </AuthLayout>
       </>
     )
   }

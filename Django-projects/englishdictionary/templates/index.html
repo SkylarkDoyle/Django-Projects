@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+  background: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+}
+h1{
+    text-align: center;
+}
+
+.search {
+ margin: auto;
+  
+}
+
+.searchTerm {
+  width: 60%;
+  margin: auto;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 7px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: 15%;
+  padding: 7px 0;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+
+}
+
+form {
+    display: block;
+    width: 50%;
+    margin: auto;
+}
+
+img{
+    width: 100px;
+    display: inline-block;
+    margin: 10px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+
+</style>
+</head>
+<body>
+<div class="wrap">
+    
+    <h1><img src="https://image.shutterstock.com/image-vector/illustration-open-book-mascot-holding-260nw-96785101.jpg" alt="">Dictionary</h1>
+   <div class="search">
+     <form action="word">
+      <input type="text" name="search" class="searchTerm" placeholder="Input Your Word Here">
+      <button type="submit" class="searchButton">
+        <i class="fa fa-search"></i>
+     </button>
+    </form>
+   </div>
+   
+</div>
+</body>
+</html>
